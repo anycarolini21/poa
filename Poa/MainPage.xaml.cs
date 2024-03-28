@@ -2,23 +2,27 @@
 
 public partial class MainPage : ContentPage
 {
-	int count = 0;
+	principal atual;
+
+	dogmae Mahaia = new dogmae();
+
+	dogfilho Bisnaguinho = new dogfilho();
+
+	dogpai Theodoro = new dogpai();
 
 	public MainPage()
 	{
-		InitializeComponent();
+    	InitializeComponent();
+
+	  	atual = Bisnaguinho;
+
+		imgPersonagem.Source = atual.GetNomeDaImagem();
+		progressBarFome.Progress = atual.GetFome();
 	}
 
-	private void OnCounterClicked(object sender, EventArgs e)
+
+	void QuandoApertarNoBotaoTrocar(object sender, EventArgs args)
 	{
-		count++;
-
-		if (count == 1)
-			CounterBtn.Text = $"Clicked {count} time";
-		else
-			CounterBtn.Text = $"Clicked {count} times";
-
-		SemanticScreenReader.Announce(CounterBtn.Text);
+		atual = Mahaia;
 	}
 }
-
