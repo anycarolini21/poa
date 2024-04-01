@@ -7,6 +7,45 @@
 
         <Image x:Name="imgPersonagem">
         
-        <ProgressBar x:Name="progressBarFome"/>     
+        <ProgressBar x:Name="progressBarFome"/> 
+
+        <Image Source="bolinha.png"
+                Grid.Row="1"
+                Grid.Column="0"/>
+
+        <Image Source="agua.png"
+                Grid.Row="2"
+                Grid.Column="0"/>
+
+        <Image Source="osso.png"
+                Grid.Row="3"
+                Grid.Column="0"/>
+
+                
+
+        <ProgressBar x:Name="progressBarBrincar"
+                     ProgressColor="#edb4da"
+                     Width="100"
+                     Height="20"
+                     Grid.Row="0"
+                     Grid.ColumnSpan="5"/>
+
+        <ProgressBar x:Name="progressBarSede"
+                     ProgressColor="#a6c8e0"
+                     Width="100"
+                     Height="20"
+                     Grid.Row="1"
+                     Grid.ColumnSpan="5"/>
+
+        <ProgressBar x:Name="progressBarFome"
+                     ProgressColor="#b0e8b8"
+                     Width="100"
+                     Height="20"
+                     Grid.Row="2"
+                     Grid.ColumnSpan="5"/>               
+
+
+
+
     </Grid>
     </ContentPage>
