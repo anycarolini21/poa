@@ -3,22 +3,51 @@
                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                 x:Class="Poa.MainPage">
 
-    <Grid>
+    <Grid> 
 
-        <Image x:Name="imgPersonagem">
-        
+        <Grid.RowDefinitions>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width= "*"/>
+        </Grid.ColumnDefinitions>
+
+
+        <Image x:Name="img"
+                Aspect="Fill"
+                Grid.RowSpan="2"
+                Grid.ColumnSpan="2"/>
+
+         <Frame  Grid.Row="0"
+                 Grid.ColumnSpan="2">
+<Grid>
+  <Grid.RowDefinitions>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+</Grid.RowDefinitions>
+
+<Grid.ColumnDefinitions>
+        <ColumnDefinition Width="40"/>
+        <ColumnDefinition Width= "*"/>
+</Grid.ColumnDefinitions>
+
+
         <ProgressBar x:Name="progressBarFome"/> 
 
         <Image Source="bolinha.png"
-                Grid.Row="1"
+                Grid.Row="0"
                 Grid.Column="0"/>
 
         <Image Source="agua.png"
-                Grid.Row="2"
+                Grid.Row="1"
                 Grid.Column="0"/>
 
         <Image Source="osso.png"
-                Grid.Row="3"
+                Grid.Row="2"
                 Grid.Column="0"/>
 
                 
@@ -28,24 +57,25 @@
                      Width="100"
                      Height="20"
                      Grid.Row="0"
-                     Grid.ColumnSpan="5"/>
+                     Grid.Column="1"/>
 
         <ProgressBar x:Name="progressBarSede"
                      ProgressColor="#a6c8e0"
                      Width="100"
                      Height="20"
-                     Grid.Row="1"
-                     Grid.ColumnSpan="5"/>
+                     Grid.Row="2"
+                     Grid.Column="1"/>
 
-        <ProgressBar x:Name="progressBarFome"
+        <ProgressBar x:Name="progressBarFome_2"
                      ProgressColor="#b0e8b8"
                      Width="100"
                      Height="20"
-                     Grid.Row="2"
-                     Grid.ColumnSpan="5"/>               
-
-
-
-
+                     Grid.Row="3"
+                     Grid.Column="1"/>
+</Grid>
+</Frame>
+                               
     </Grid>
+
+    
     </ContentPage>

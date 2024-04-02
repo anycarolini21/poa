@@ -6,7 +6,7 @@ public partial class MainPage : ContentPage
 
 	dogmae Mahaia = new dogmae();
 
-	dogfilho Bisnaguinho = new dogfilho();
+	dogfilhote Bisnaguinho = new dogfilhote();
 
 	dogpai Theodoro = new dogpai();
 
@@ -16,7 +16,7 @@ public partial class MainPage : ContentPage
 
 	  	atual = Bisnaguinho;
 
-		imgPersonagem.Source = atual.GetNomeDaImagem();
+		img.Source = atual.GetNomeDaImagem();
 		progressBarFome.Progress = atual.GetFome();
 	}
 
