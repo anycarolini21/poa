@@ -17,7 +17,7 @@ public partial class MainPage : ContentPage
 	  	atual = Bisnaguinho;
 
 		img.Source = atual.GetNomeDaImagem();
-		progressBarFome.Progress = atual.GetFome();
+		
 	}
 
 
