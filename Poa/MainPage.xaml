@@ -4,7 +4,7 @@
                 x:Class="Poa.MainPage">
 
     <Grid> 
-
+ 
         <Image x:Name="img"
                 Aspect="Fill"/>
          <Frame  HeightRequest="150"
@@ -29,7 +29,7 @@
                                 Grid.Row="0"
                                 Grid.Column="0"/>
                         
-                        <ProgressBar x:Name="progressBarBrincar"
+                        <ProgressBar x:Name="progressoBrincar"
                                      ProgressColor="#b3d166"
                                      Grid.Row="0"
                                      Grid.Column="1"/> 
@@ -39,7 +39,7 @@
                                 Grid.Row="1"
                                 Grid.Column="0"/>
 
-                        <ProgressBar x:Name="progressBarSede"
+                        <ProgressBar x:Name="progressoSede"
                                 ProgressColor="#8fccc5"
                                 Width="100"
                                 Height="20"
@@ -51,12 +51,64 @@
                                 Grid.Row="2"
                                 Grid.Column="0"/>
 
-                        <ProgressBar x:Name="progressBarFome"
+                        <ProgressBar x:Name="progressoFome"
                                 ProgressColor="#c98dc7"
                                 Width="100"
                                 Height="20"
                                 Grid.Row="2"
                                 Grid.Column="1"/>
+
+
+
+
+
+
+                                
+
+             
+         <Frame BackgroundColor="#a38d6d"
+               CornerRadius="20"
+               Padding="5"
+               BorderClor="Black"
+               Grid.Row="3"
+               Grid.Column="1">
+
+                <Grid>
+
+                        <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width= "*"/>
+                                <ColumnDefinition Width= "*"/>
+                                 <ColumnDefinition Width= "*"/>
+                        </Grid.ColumnDefinitions>
+
+
+                        <ImageButton Source="bolinha.png"
+                                Clicked="AumentaBrincar"
+                                BackgroundColor="Black"
+                                Grid.Column="0"
+                                Grid.Row="0"/>
+
+                        <ImageButton Source="agua.png"
+                                Clicked="AumentaSede"
+                                BackgroundColor="Black"
+                                Grid.Column="1"
+                                Grid.Row="0"/>
+
+                        <ImageButton Source="osso.png"   
+                                Clicked="AumentaFome"
+                                BackgroundColor="Black"
+                                Grid.Column="2"
+                                Grid.Row="0"/>
+
+
+                         <ImageButton Source="seta.png"   
+                                Clicked="TrocaPersonagem"
+                                BackgroundColor="Black"
+                                Grid.Column="3"
+                                Grid.Row="0"/>
+
+
 
                 </Grid>
         </Frame>

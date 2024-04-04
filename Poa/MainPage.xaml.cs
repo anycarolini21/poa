@@ -17,12 +17,29 @@ public partial class MainPage : ContentPage
 	  	atual = Bisnaguinho;
 
 		img.Source = atual.GetNomeDaImagem();
-		
+	
+		progressoFome.Progress = atual.GetFome();
+		progressoSede.Progress = atual.GetSede();
+		progressoBrincar.Progress = atual.GetBrincar();
 	}
 
 
-	void QuandoApertarNoBotaoTrocar(object sender, EventArgs args)
+	void AumentaBrincar(object sender, EventArgs args)
+	{
+		atual = Mahaia;
+	}
+
+	void AumentaSede(object sender, EventArgs args)
+	{
+		atual = Mahaia;
+	}
+	void AumentaFome(object sender, EventArgs args)
+	{
+		atual = Mahaia;
+	}
+	void TrocaPersonagem(object sender, EventArgs args)
 	{
 		atual = Mahaia;
 	}
 }
+
