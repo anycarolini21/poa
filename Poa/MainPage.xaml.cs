@@ -14,7 +14,7 @@ public partial class MainPage : ContentPage
 	{
     	InitializeComponent();
 
-	  	atual = Bisnaguinho;
+	  	atual = Theodoro;
 
 		img.Source = atual.GetNomeDaImagem();
 	
@@ -37,9 +37,22 @@ public partial class MainPage : ContentPage
 	{
 		atual = Mahaia;
 	}
+
 	void TrocaPersonagem(object sender, EventArgs args)
 	{
+	   if(atual == Bisnaguinho) 
+	   {
 		atual = Mahaia;
+	   }
+	   else if (atual == Mahaia)
+	   {
+		atual = Theodoro;
+	   }
+	   else 
+	   {
+		atual = Bisnaguinho;
+	   }
+	   img.Source = atual.GetNomeDaImagem();
 	}
 }
 
