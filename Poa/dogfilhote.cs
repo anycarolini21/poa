@@ -6,9 +6,9 @@ namespace Poa;
         public dogfilhote(): base() 
         { 
             nomeDaImagem = "dogfilhote.png";
-            Fome = 1;
+            Fome = 4;
             Sede = 1;
-            Brincar = 1;
+            Brincar = 2;
         }
 
     }

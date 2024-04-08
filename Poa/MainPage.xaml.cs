@@ -21,21 +21,30 @@ public partial class MainPage : ContentPage
 		progressoFome.Progress = atual.GetFome();
 		progressoSede.Progress = atual.GetSede();
 		progressoBrincar.Progress = atual.GetBrincar();
+
+		var timer = Application.Current.Dispatcher.CreateTimer();
+			timer.Interval =
+			TimeSpan.FromSeconds(5);
+			timer.Tick += (s,e) =>
+			PassouTempo();
+			timer.Start();
 	}
 
 
 	void AumentaBrincar(object sender, EventArgs args)
 	{
-		atual = Mahaia;
+		atual.SetBrincar(atual.GetBrincar()+0.1);
+		AtualizaPersonagem();
 	}
-
 	void AumentaSede(object sender, EventArgs args)
 	{
-		atual = Mahaia;
+		atual.SetSede(atual.GetSede()+0.1);
+		AtualizaPersonagem();
 	}
 	void AumentaFome(object sender, EventArgs args)
 	{
-		atual = Mahaia;
+		atual.SetFome(atual.GetFome()+0.1);
+		AtualizaPersonagem();
 	}
 
 	void TrocaPersonagem(object sender, EventArgs args)
@@ -53,6 +62,30 @@ public partial class MainPage : ContentPage
 		atual = Bisnaguinho;
 	   }
 	   img.Source = atual.GetNomeDaImagem();
+
+	   progressoFome.Progress = atual.GetFome();
+       progressoSede.Progress = atual.GetSede();
+	   progressoBrincar.Progress = atual.GetBrincar();
+	
 	}
+
+	void AtualizaPersonagem()
+	{
+		progressoFome.Progress= atual.GetFome();
+		progressoSede.Progress= atual.GetSede();
+		progressoBrincar.Progress= atual.GetBrincar();
+	}
+
+		
+
+		 void PassouTempo()
+		 {
+			atual.SetSede(atual.GetSede()-0.1);
+			atual.SetFome(atual.GetFome()-0.1);
+			atual.SetBrincar(atual.GetBrincar()-0.1);
+				AtualizaPersonagem();
+
+		 }
+
 }
 

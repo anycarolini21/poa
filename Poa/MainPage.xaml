@@ -7,7 +7,7 @@
  
         <Image x:Name="img"
                 Aspect="Fill"/>
-         <Frame  HeightRequest="150"
+         <Frame  HeightRequest="120"
                  CornerRadius="20"
                  BackgroundColor="#a38d6d"
                  Margin="20"
@@ -62,7 +62,7 @@
              
          <Frame BackgroundColor="#a38d6d"
                CornerRadius="20"
-               HeightRequest="300"
+               HeightRequest="200"
                WidthRequest="70"
                Margin="20, 0, 0, 0" 
                HorizontalOptions="Start"
