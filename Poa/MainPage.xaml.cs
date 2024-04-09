@@ -30,6 +30,13 @@ public partial class MainPage : ContentPage
 			timer.Start();
 	}
 
+	void AtualizaPersonagem()
+	{
+		progressoFome.Progress= atual.GetFome();
+		progressoSede.Progress= atual.GetSede();
+		progressoBrincar.Progress= atual.GetBrincar();
+	}
+
 
 	void AumentaBrincar(object sender, EventArgs args)
 	{
@@ -69,22 +76,12 @@ public partial class MainPage : ContentPage
 	
 	}
 
-	void AtualizaPersonagem()
-	{
-		progressoFome.Progress= atual.GetFome();
-		progressoSede.Progress= atual.GetSede();
-		progressoBrincar.Progress= atual.GetBrincar();
-	}
-
-		
-
 		 void PassouTempo()
 		 {
 			atual.SetSede(atual.GetSede()-0.1);
 			atual.SetFome(atual.GetFome()-0.1);
 			atual.SetBrincar(atual.GetBrincar()-0.1);
-				AtualizaPersonagem();
-
+			AtualizaPersonagem();
 		 }
 
 }

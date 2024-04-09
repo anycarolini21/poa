@@ -4,8 +4,9 @@ public class dogpai : principal
     public dogpai(): base() 
     { 
         nomeDaImagem = "dogpai.png";
-        Fome = 3;
-        Sede = 2;
+        NomedaImagemMorto = "paimorto.png";
+        Fome = 1;
+        Sede = 1;
         Brincar = 1;
     }
 }
