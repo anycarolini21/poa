@@ -78,10 +78,15 @@ public partial class MainPage : ContentPage
 
 		 void PassouTempo()
 		 {
+			var estavaMorto = atual.GetMorto();
 			atual.SetSede(atual.GetSede()-0.1);
 			atual.SetFome(atual.GetFome()-0.1);
 			atual.SetBrincar(atual.GetBrincar()-0.1);
 			AtualizaPersonagem();
+			if (estavaMorto != atual.GetMorto())
+			{
+				img.Source = atual.GetNomeDaImagem();
+			}
 		 }
 
 }
