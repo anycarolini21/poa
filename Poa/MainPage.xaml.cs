@@ -87,6 +87,12 @@ public partial class MainPage : ContentPage
 			{
 				img.Source = atual.GetNomeDaImagem();
 			}
+			if (Bisnaguinho.GetMorto() &&
+				Mahaia.GetMorto() &&
+				Theodoro.GetMorto())
+			{
+				Application.Current.MainPage = new GameOverPage();
+			}
 		 }
 
 }
